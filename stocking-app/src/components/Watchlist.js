@@ -4,7 +4,7 @@ import StockCard from './StockCard.js'
 function Watchlist() {
   return (
     <div className="watchlist">
-      <h1>Watchlist</h1>
+      <h2>Recently Searched Stocks:</h2>
       <StockCard />
     </div>
   );
