@@ -37,7 +37,7 @@ function SearchBar() {
   };
 
   return (
-    <input id="searchbar" onKeyDown={handleKeyDown} />
+    <input id="searchbar" placeholder="search a ticker" onKeyDown={handleKeyDown} />
   );
 }
 
