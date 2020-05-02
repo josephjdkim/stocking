@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 
 function StockInfo() {
   return (
-    <h1>StockInfo</h1>
+    <div className="stockInfo">
+      <h1>StockInfo</h1>
+    </div>
   );
 }
 

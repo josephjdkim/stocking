@@ -30,12 +30,14 @@ function Watchlist() {
 
   return (
     <div className="watchlist">
-      <h2>Recently Searched Stocks:</h2>
-      {watchlist.map(stock => {
-        return(
-          <StockCard stock={stock} />
-        )
-      })}
+      <h2 className="prompt">Recently Searched Stocks:</h2>
+      <div className="stocks">
+        {watchlist.map(stock => {
+          return(
+            <StockCard stock={stock} />
+            )
+          })}
+      </div>
     </div>
   );
 }

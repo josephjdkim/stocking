@@ -5,3 +5,57 @@
 body {
   font-family: 'Roboto', 'Helvetica Neue', sans-serif;
 }
+
+.header {
+  margin: 60px 60px;
+}
+
+.hero {
+  margin-bottom: 28px;
+  font-size: 60px;
+  color: #FFCD06;
+  float: left;
+}
+
+#searchbar {
+  float: right;
+}
+
+.stockInfo {
+  clear: both;
+  display: block;
+  height: 220px;
+  padding: 60px 60px;
+  background-color: #F3FFFC;
+}
+
+.watchlist {
+  padding: 40px 60px;
+}
+
+.watchlist .prompt {
+  margin: 0px 0px 24px;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.watchlist .stocks {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.stockCard {
+  width: 264px;
+  height: 80px;
+  margin-top: 32px;
+
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 2px;
+  border-color: #00C389;
+  color: #00C389;
+  box-shadow: 0px 2px 8px grey;
+}
