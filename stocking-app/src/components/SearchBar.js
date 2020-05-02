@@ -12,17 +12,23 @@ function SearchBar() {
     fetch(searchQuery)
       .then((response) => { return response.json(); })
       .then((jsonResponse) => {
+        console.log(jsonResponse);
+        document.getElementById('searchbar').className = 'valid-stock';
         let ts = jsonResponse["Time Series (Daily)"];
-        let data = ts[Object.keys(ts)[0]]
+        let data = ts[Object.keys(ts)[0]];
 
         setStockData({
-          symbol: jsonResponse['Meta Data']['2. Symbol'],
-          open: data['1. open'],
-          high: data['2. high'],
-          low: data['3. low'],
-          close: data['4. close'],
-          volume: data['5. volume']
+          symbol: symbol,
+          open:  Number(Number(data['1. open']).toFixed(2)).toLocaleString(),
+          high: Number(Number(data['2. high']).toFixed(2)).toLocaleString(),
+          low:  Number(Number(data['3. low']).toFixed(2)).toLocaleString(),
+          close: Number(Number(data['4. close']).toFixed(2)).toLocaleString(),
+          volume: data['5. volume'].toLocaleString()
         });
+      })
+      .catch(err => {
+        console.log(err)
+        document.getElementById('searchbar').className = 'invalid-stock';
       });
     };
     

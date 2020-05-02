@@ -35,6 +35,14 @@ input:focus {
   font-style: italic;
 }
 
+/* .invalid-stock {
+  background-color: pink;
+}
+
+.invalid-stock::before {
+  content: 'try a different symbol!';
+} */
+
 .stockInfo {
   clear: both;
   display: block;
