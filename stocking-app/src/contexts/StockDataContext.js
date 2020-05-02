@@ -4,7 +4,7 @@ export const StockDataContext = createContext();
 
 function StockDataContextProvider(props) {
   const [stockData, setStockData] = useState({
-    symbol: 'ABC',
+    symbol: 'STOCKING',
     open: 0,
     high: 0,
     low: 0,

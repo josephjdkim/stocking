@@ -26,7 +26,7 @@ function SearchBar() {
       });
     };
     
-  console.log('stockData from context', stockData);
+  console.log('stockData from within SearchBar', stockData);
 
   function handleKeyDown(e) {
     if (e.key === 'Enter') {
