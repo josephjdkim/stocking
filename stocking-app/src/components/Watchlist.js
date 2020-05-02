@@ -33,7 +33,7 @@ function Watchlist() {
       <h2>Recently Searched Stocks:</h2>
       {watchlist.map(stock => {
         return(
-          <StockCard></StockCard>
+          <StockCard stock={stock} />
         )
       })}
     </div>
