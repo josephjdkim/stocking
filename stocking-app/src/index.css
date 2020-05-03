@@ -11,18 +11,26 @@ input:focus {
 }
 
 .header {
-  margin: 60px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 60px 40px;
 }
 
 .hero {
-  margin-bottom: 28px;
   font-size: 60px;
   color: #FFCD06;
-  float: left;
+  /* float: left; */
+}
+
+#search {
+  width: 200px;
+  height: 40px;
+  float: right;
 }
 
 #searchbar {
-  float: right;
+  /* float: right; */
   padding-left: 12px;
   padding-right: 12px;
   width: 160px;
@@ -35,13 +43,13 @@ input:focus {
   font-style: italic;
 }
 
-/* .invalid-stock {
-  background-color: pink;
-}
-
 .invalid-stock::before {
-  content: 'try a different symbol!';
-} */
+  content: '!';
+  display: inline-block;
+  margin-right: 20px;
+  background-color: pink;
+  width: 1px;
+}
 
 .stockInfo {
   clear: both;

@@ -13,7 +13,7 @@ function SearchBar() {
       .then((response) => { return response.json(); })
       .then((jsonResponse) => {
         console.log(jsonResponse);
-        document.getElementById('searchbar').className = 'valid-stock';
+        document.getElementById('search').className = 'valid-stock';
         let ts = jsonResponse["Time Series (Daily)"];
         let data = ts[Object.keys(ts)[0]];
 
@@ -28,7 +28,7 @@ function SearchBar() {
       })
       .catch(err => {
         console.log(err)
-        document.getElementById('searchbar').className = 'invalid-stock';
+        document.getElementById('search').className = 'invalid-stock';
       });
     };
     
@@ -43,7 +43,9 @@ function SearchBar() {
   };
 
   return (
-    <input id="searchbar" placeholder="search a ticker" onKeyDown={handleKeyDown} />
+    <div id="search">
+      <input id="searchbar" placeholder="search a ticker" onKeyDown={handleKeyDown} />
+    </div>
   );
 }
 
