@@ -16,12 +16,10 @@ function SearchBar() {
       .then((companyResponse) => { return companyResponse.json(); })
       .then((companyJSON) => {
         companyName = companyJSON.bestMatches[0]["2. name"];
-        console.log('NAME', companyName);
         return fetch(stockQuery);
       })
       .then((response) => { return response.json(); })
       .then((jsonResponse) => {
-        console.log(jsonResponse);
         let ts = jsonResponse["Time Series (Daily)"];
         let data = ts[Object.keys(ts)[0]];
 
@@ -40,12 +38,10 @@ function SearchBar() {
         });
       })
       .catch(err => {
-        console.log(err)
+        console.log('Encountered an error:', err)
       });
     };
-    
-  console.log('stockData from within SearchBar', stockData);
-
+  
   function handleKeyDown(e) {
     if (e.key === 'Enter') {
       e.preventDefault();

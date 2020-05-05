@@ -6,7 +6,6 @@ function StockInfo() {
   const datumKeys = [['volume', 'Volume'], ['open', 'Open'], ['high', 'High'], ['open', 'Open']];
 
   useEffect(() => {
-    console.log('useEffect from within StockInfo. Symbol from data:', stockData['symbol']);
     handleDefault();
     setTheme();
     

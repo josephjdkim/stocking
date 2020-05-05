@@ -7,15 +7,10 @@ function Watchlist() {
   const [watchlist, setWatchlist] = useState([]);
 
   useEffect(() => {
-    console.log('useEffect from within Watchlist. Symbol from data:', stockData.symbol);
     checkNewStock();
-    console.log('watchlist from within Watchlist', watchlist)
   }, [stockData]);
   
   function checkNewStock() {
-    console.log('WITHIN checkNewStock()')
-    
-    
     const isDuplicate = watchlist.find(s => (s.symbol === stockData.symbol))
     if ((!isDuplicate && !(stockData.symbol === 'STOCKING'))) {
       setWatchlist([...watchlist, {
