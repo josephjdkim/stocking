@@ -7,7 +7,7 @@ function Watchlist() {
   const [watchlist, setWatchlist] = useState([]);
 
   useEffect(() => {
-    console.log('useEffect from within Watchlist. Symbol from data:', stockData['symbol']);
+    console.log('useEffect from within Watchlist. Symbol from data:', stockData.symbol);
     checkNewStock();
     console.log('watchlist from within Watchlist', watchlist)
   }, [stockData]);
@@ -17,15 +17,16 @@ function Watchlist() {
     
     
     const isDuplicate = watchlist.find(s => (s.symbol === stockData.symbol))
-    if ((!isDuplicate && !(stockData['symbol'] === 'STOCKING'))) {
+    if ((!isDuplicate && !(stockData.symbol === 'STOCKING'))) {
       setWatchlist([...watchlist, {
-        symbol: stockData['symbol'],
-        open: stockData['open'],
-        high: stockData['high'],
-        low: stockData['low'],
-        close: stockData['close'],
-        volume: stockData['volume'],
-        change: stockData['change']
+        name: stockData.name,
+        symbol: stockData.symbol,
+        open: stockData.open,
+        high: stockData.high,
+        low: stockData.low,
+        close: stockData.close,
+        volume: stockData.volume,
+        change: stockData.change
       }]);
     };
   };

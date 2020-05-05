@@ -29,8 +29,8 @@ function StockInfo() {
 
   return (
     <div id="stockInfo">
+      <h3>{stockData.name}</h3>
       <h3>{stockData.symbol}</h3>
-      <h3>COMPANY NAME GOES HERE</h3>
       <h3>Change: {stockData.change}%</h3>
       <h3>Volume: {stockData.volume}</h3>
       <h3>High: {stockData.high}</h3>

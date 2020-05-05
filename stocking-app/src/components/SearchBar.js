@@ -4,12 +4,21 @@ import { StockDataContext } from '../contexts/StockDataContext'
 
 function SearchBar() {
   const { stockData, setStockData } = useContext(StockDataContext);
-  const URL = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=';
+  const COMPANY_API = 'https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=';
+  const STOCK_API = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=';
 
   function handleSearch(symbol) {
-    let searchQuery = URL + symbol + '&apikey=' + config.apiKey;
+    let stockQuery = STOCK_API + symbol + '&apikey=' + config.apiKey;
+    let companyQuery = COMPANY_API + symbol + '&apikey=' + config.apiKey;
+    let companyName;
 
-    fetch(searchQuery)
+    fetch(companyQuery)
+      .then((companyResponse) => { return companyResponse.json(); })
+      .then((companyJSON) => {
+        companyName = companyJSON.bestMatches[0]["2. name"];
+        console.log('NAME', companyName);
+        return fetch(stockQuery);
+      })
       .then((response) => { return response.json(); })
       .then((jsonResponse) => {
         console.log(jsonResponse);
@@ -21,6 +30,7 @@ function SearchBar() {
         let close = Number(Number(data['4. close']).toFixed(2)).toLocaleString();
 
         setStockData({
+          name: companyName,
           symbol: symbol.toUpperCase(),
           open:  open,
           high: Number(Number(data['2. high']).toFixed(2)).toLocaleString(),
