@@ -91,14 +91,22 @@ input:focus {
   border-radius: 22px;
   border-width: 2px;
   box-shadow: 0px 4px 6px grey;
+
+  cursor: pointer;
 }
 
 .green-stockCard {
   border-color: #00C389;
   color: #00C389;
 }
+.green-stockCard:hover {
+  background-color: #F3FFFC;
+}
 
 .red-stockCard {
   border-color: #FF4A4A;
   color: #FF4A4A;
+}
+.red-stockCard:hover {
+  background-color: #FFF8F8;
 }
