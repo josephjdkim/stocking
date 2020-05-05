@@ -16,7 +16,7 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 40px 60px 40px;
+  margin: 40px 72px 40px;
 }
 
 .hero {
@@ -48,19 +48,33 @@ input:focus {
   clear: both;
   display: block;
   height: 200px;
-  padding: 60px 60px;
+  padding: 60px 100px;
 }
-
 .green-stockInfo {
   background-color: #F3FFFC;
 }
-
 .red-stockInfo {
   background-color: #FFF8F8;
 }
 
+#stockInfoTop{
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+
+  font-size: 36px;
+}
+.green-stockInfoTop {
+  color: #00C389;
+}
+.red-stockInfoTop {
+  color: #FF4A4A;
+}
+
 .watchlist {
-  padding: 40px 60px;
+  padding: 40px 72px;
 }
 
 .watchlist .prompt {
@@ -129,4 +143,12 @@ input:focus {
   margin-right: 20px;
   flex-grow: 1;
   margin-bottom: 12px;
+}
+
+.stockInfoTop-left {
+  text-align: left;
+}
+
+.stockInfoTop-right {
+  text-align: right;
 }

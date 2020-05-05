@@ -22,21 +22,27 @@ function StockInfo() {
   function setTheme() {
     if (stockData['change'] >= 0) {
       document.getElementById('stockInfo').className = 'green-stockInfo';
+      document.getElementById('stockInfoTop').className = 'green-stockInfoTop';
     } else {
       document.getElementById('stockInfo').className = 'red-stockInfo';
+      document.getElementById('stockInfoTop').className = 'red-stockInfoTop';
     }
   }
 
   return (
     <div id="stockInfo">
-      <h3>{stockData.name}</h3>
-      <h3>{stockData.symbol}</h3>
-      <h3>Change: {stockData.change}%</h3>
-      <h3>Volume: {stockData.volume}</h3>
-      <h3>High: {stockData.high}</h3>
-      <h3>Low: {stockData.low}</h3>
-      <h3>Open: {stockData.open}</h3>
-      <h3>Close: {stockData.close}</h3>
+      <div id="stockInfoTop">
+        <h3 className="stockInfoTop-left">{stockData.name}</h3>
+        <h3 className="stockInfoTop-left">{stockData.symbol}</h3>
+        <h3 className="stockInfoTop-right">${stockData.close}</h3>
+        <h3 className="stockInfoTop-right">{stockData.change}%</h3>
+      </div>
+      <div id="stockInfoBottom">
+        <h3 className="stockInfoBottom-left">Volume: {stockData.volume}</h3>
+        <h3 className="stockInfoBottom-left">High: {stockData.high}</h3>
+        <h3 className="stockInfoBottom-left">Low: {stockData.low}</h3>
+        <h3 className="stockInfoBottom-left">Open: {stockData.open}</h3>
+      </div>
     </div>
   );
 }
