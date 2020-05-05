@@ -32,7 +32,7 @@ function StockInfo() {
   return (
     <div id="stockInfo">
       <div id="stockInfoTop">
-        <div className="stockInfoTop-left">{stockData.name}</div>
+        <div id="stockInfoName" className="stockInfoTop-left">{stockData.name}</div>
         <div className="stockInfoTop-left">{stockData.symbol}</div>
         <div className="stockInfoTop-right">${stockData.close}</div>
         <div className="stockInfoTop-right">{stockData.change}%</div>
