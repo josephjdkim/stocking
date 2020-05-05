@@ -3,7 +3,7 @@ import { StockDataContext } from '../contexts/StockDataContext'
 
 function StockInfo() {
   const {stockData} = useContext(StockDataContext);
-  const datumKeys = [['volume', 'Volume'], ['open', 'Open'], ['high', 'High'], ['open', 'Open'], ['updated', 'Updated']];
+  const datumKeys = [['volume', 'Volume'], ['open', 'Open'], ['high', 'High'], ['low', 'Low'], ['updated', 'Updated']];
 
   useEffect(() => {
     handleDefault();
@@ -42,7 +42,11 @@ function StockInfo() {
         return (
           <div className="stockDatum">
             <p className="datumLabel">{pair[1]}:</p>
-            <p className="datumValue">{stockData[pair[0]]}</p>
+            <p className="datumValue">{
+              (['Open', 'High', 'Low'].includes(pair[1])
+                ? '$'+stockData[pair[0]].toString()
+                : stockData[pair[0]])
+            }</p>
           </div>
         )
       })}
