@@ -47,7 +47,7 @@ input:focus {
 #stockInfo {
   clear: both;
   display: block;
-  height: 200px;
+  /* height: 200px; */
   padding: 40px 100px;
 }
 .green-stockInfo {
@@ -182,14 +182,17 @@ input:focus {
 /* 992 */
 
 /* tablet landscape */
-@media screen and (max-width:1200px) {
-
-}
+/* @media screen and (max-width:1200px) {} */
 /* tablet portrait */
 @media screen and (max-width:900px) {
-
+  #stockDataBank {
+    height: auto;
+  }
+  .stockDatum {
+    width: 100%;
+  }
 }
 /* phone portrait */
 @media screen and (max-width:600px) {
-  
+
 }
