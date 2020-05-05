@@ -126,14 +126,15 @@ input:focus {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-start;
+  margin-top: 12px;
 }
 
 .stockCard {
-  /* width: 264px; */
-  width: 24.5%;
+  width: 22%;
   height: 76px;
-  margin-top: 32px;
-  margin-right: 1%;
+  margin-top: 1%;
+  margin-right: 2.5%;
+  margin-bottom: 12px;
   
   display: flex;
   flex-direction: row;
@@ -190,8 +191,8 @@ input:focus {
 
 @media screen and (max-width:1200px) {
   .stockCard {
-    width: 32%;
-    margin-right: 1%;
+    width: 30%;
+    margin-right: 2.5%;
   }
 }
 
@@ -200,7 +201,6 @@ input:focus {
   .hero {
     font-size: 56px;
   }
-  
   #search {
     width: 160px;
   }
@@ -214,37 +214,36 @@ input:focus {
     width: 100%;
   }
   .stockCard {
-    width: 45%;
-    margin-right: 5%;
+    width: 47%;
+    margin-right: 2%;
   }
-  /* phone portrait */
-  @media screen and (max-width:600px) {
-    .header {
-      margin: 40px 32px 36px;
-    }
+}
 
-    .hero {
-      margin-bottom: 12px;
-      font-size: 36px;
-    }
-    #stockInfo {
-      padding: 40px 32px;
-    }
-    #stockInfoTop {
-      font-size: 24px;
-      font-weight: 900;
-      height: 70px;
+/* phone portrait */
+@media screen and (max-width:600px) {
+  .header {
+    margin: 40px 32px 36px;
+  }
+  .hero {
+    margin-bottom: 12px;
+    font-size: 36px;
+  }
+  #stockInfo {
+    padding: 40px 32px;
+  }
+  #stockInfoTop {
+    font-size: 24px;
+    font-weight: 900;
+    height: 70px;
+  }
 
-    }
-
-    .watchlist {
-      padding: 40px 32px;
-    }
-    .watchlist .prompt {
-      font-size: 24px;
-    }
-    .stockCard {
-      width: 100%;
-    }
+  .watchlist {
+    padding: 40px 32px;
+  }
+  .watchlist .prompt {
+    font-size: 24px;
+  }
+  .stockCard {
+    width: 100%;
   }
 }
