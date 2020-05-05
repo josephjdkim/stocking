@@ -38,8 +38,8 @@ function StockInfo() {
         <div className="stockInfoTop-right">${stockData.close}</div>
         <div className="stockInfoTop-right">{stockData.change}%</div>
       </div>
+      <div id="stockDataBank">
       {datumKeys.map(pair => {
-        // console.log("INSIDE datumKeys.forEach:", pair[0]);
         return (
           <div className="stockDatum">
             <p className="datumLabel">{pair[1]}:</p>
@@ -47,11 +47,7 @@ function StockInfo() {
           </div>
         )
       })}
-
-        {/* <div className="stockDatum">Volume: {stockData.volume}</div>
-        <div className="stockDatum">High: {stockData.high}</div>
-        <div className="stockDatum">Low: {stockData.low}</div>
-        <div className="stockDatum">Open: {stockData.open}</div> */}
+      </div>
     </div>
   );
 }
