@@ -17,12 +17,16 @@ function SearchBar() {
         let ts = jsonResponse["Time Series (Daily)"];
         let data = ts[Object.keys(ts)[0]];
 
+        let open = Number(Number(data['1. open']).toFixed(2)).toLocaleString();
+        let close = Number(Number(data['4. close']).toFixed(2)).toLocaleString();
+
         setStockData({
-          symbol: symbol,
-          open:  Number(Number(data['1. open']).toFixed(2)).toLocaleString(),
+          symbol: symbol.toUpperCase(),
+          open:  open,
           high: Number(Number(data['2. high']).toFixed(2)).toLocaleString(),
           low:  Number(Number(data['3. low']).toFixed(2)).toLocaleString(),
-          close: Number(Number(data['4. close']).toFixed(2)).toLocaleString(),
+          close: close,
+          change: ((close - open) / open) * 100,
           volume: data['5. volume'].toLocaleString()
         });
       })
