@@ -22,7 +22,6 @@ function SearchBar() {
       .then((response) => { return response.json(); })
       .then((jsonResponse) => {
         console.log(jsonResponse);
-        document.getElementById('search').className = 'valid-stock';
         let ts = jsonResponse["Time Series (Daily)"];
         let data = ts[Object.keys(ts)[0]];
 
@@ -42,7 +41,6 @@ function SearchBar() {
       })
       .catch(err => {
         console.log(err)
-        document.getElementById('search').className = 'invalid-stock';
       });
     };
     

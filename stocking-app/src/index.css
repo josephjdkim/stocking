@@ -44,14 +44,6 @@ input:focus {
   font-style: italic;
 }
 
-.invalid-stock::before {
-  content: '!';
-  display: inline-block;
-  margin-right: 20px;
-  background-color: pink;
-  width: 1px;
-}
-
 #stockInfo {
   clear: both;
   display: block;
