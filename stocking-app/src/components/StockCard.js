@@ -20,9 +20,9 @@ function StockCard(props) {
 
   return (
     <div className={className} onClick={updateStockData}>
-      <h3>{props.stock.name}</h3>
-      <h3>{props.stock.symbol}</h3>
-      <h3>{props.stock.change}</h3>
+      <p className="stockCard-name">{props.stock.name}</p>
+      <h3 className="stockCard-symbol">{props.stock.symbol}</h3>
+      <h3 className="stockCard-change">{props.stock.change}%</h3>
     </div>
   );
 }
