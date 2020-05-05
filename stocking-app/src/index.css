@@ -185,14 +185,38 @@ input:focus {
 /* @media screen and (max-width:1200px) {} */
 /* tablet portrait */
 @media screen and (max-width:900px) {
+  .header {
+    margin: 40px 40px 36px;
+  }
+  
   #stockDataBank {
     height: auto;
   }
   .stockDatum {
     width: 100%;
   }
-}
-/* phone portrait */
-@media screen and (max-width:600px) {
+  /* phone portrait */
+  @media screen and (max-width:600px) {
+    .hero {
+      margin-bottom: 12px;
+      font-size: 44px;
+    }
+    #stockInfo {
+      padding: 40px 40px;
+    }
+    #stockInfoTop {
+      font-size: 32px;
+      font-weight: 900;
+    }
 
+    .watchlist {
+      padding: 40px 40px;
+    }
+    .watchlist .prompt {
+      font-size: 24px;
+    }
+    .stockCard {
+      width: 100%;
+    }
+  }
 }
