@@ -8,8 +8,13 @@ function SearchBar() {
   const STOCK_API = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=';
 
   function handleSearch(symbol) {
-    let stockQuery = STOCK_API + symbol + '&apikey=' + config.apiKey;
-    let companyQuery = COMPANY_API + symbol + '&apikey=' + config.apiKey;
+    // let stockQuery = STOCK_API + symbol + '&apikey=' + config.apiKey;
+    // let companyQuery = COMPANY_API + symbol + '&apikey=' + config.apiKey;
+
+    // temporary public-facing api key for GitHub Pages demo
+    let stockQuery = STOCK_API + symbol + '&apikey=99B0OWHKU6GXNX6A';
+    let companyQuery = COMPANY_API + symbol + '&apikey=99B0OWHKU6GXNX6A';
+
     let companyName;
 
     fetch(companyQuery)
