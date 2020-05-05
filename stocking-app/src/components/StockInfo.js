@@ -7,21 +7,31 @@ function StockInfo() {
   useEffect(() => {
     console.log('useEffect from within StockInfo. Symbol from data:', stockData['symbol']);
     handleDefault();
+    setTheme();
+    
   }, [stockData]);
 
   function handleDefault() {
     if (stockData['symbol'] === 'STOCKING') {
-      document.getElementsByClassName('stockInfo')[0].style.display = 'none';
+      document.getElementById('stockInfo').style.display = 'none';
     } else {
-      document.getElementsByClassName('stockInfo')[0].style.display = 'block'
+      document.getElementById('stockInfo').style.display = 'block'
     };
   }
 
+  function setTheme() {
+    if (stockData['change'] >= 0) {
+      document.getElementById('stockInfo').className = 'green-stockInfo';
+    } else {
+      document.getElementById('stockInfo').className = 'red-stockInfo';
+    }
+  }
 
   return (
-    <div className="stockInfo">
+    <div id="stockInfo">
       <h3>{stockData.symbol}</h3>
       <h3>COMPANY NAME GOES HERE</h3>
+      <h3>Change: {stockData.change}%</h3>
       <h3>Volume: {stockData.volume}</h3>
       <h3>High: {stockData.high}</h3>
       <h3>Low: {stockData.low}</h3>

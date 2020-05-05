@@ -30,7 +30,6 @@ input:focus {
 }
 
 #searchbar {
-  /* float: right; */
   padding-left: 12px;
   padding-right: 12px;
   width: 160px;
@@ -51,12 +50,19 @@ input:focus {
   width: 1px;
 }
 
-.stockInfo {
+#stockInfo {
   clear: both;
   display: block;
   height: 220px;
   padding: 60px 60px;
+}
+
+.green-stockInfo {
   background-color: #F3FFFC;
+}
+
+.red-stockInfo {
+  background-color: #FFF8F8;
 }
 
 .watchlist {

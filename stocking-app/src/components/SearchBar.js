@@ -26,7 +26,7 @@ function SearchBar() {
           high: Number(Number(data['2. high']).toFixed(2)).toLocaleString(),
           low:  Number(Number(data['3. low']).toFixed(2)).toLocaleString(),
           close: close,
-          change: ((close - open) / open) * 100,
+          change: Number(Number((((close - open) / open) * 100)).toFixed(2)).toLocaleString(),
           volume: data['5. volume'].toLocaleString()
         });
       })
