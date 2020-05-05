@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/stocking/static/css/main.78509c19.chunk.css",
+    "main.css": "/stocking/static/css/main.982110e3.chunk.css",
     "main.js": "/stocking/static/js/main.d2164f55.chunk.js",
     "main.js.map": "/stocking/static/js/main.d2164f55.chunk.js.map",
     "runtime-main.js": "/stocking/static/js/runtime-main.f910fbcf.js",
@@ -8,15 +8,15 @@
     "static/js/2.a954b53f.chunk.js": "/stocking/static/js/2.a954b53f.chunk.js",
     "static/js/2.a954b53f.chunk.js.map": "/stocking/static/js/2.a954b53f.chunk.js.map",
     "index.html": "/stocking/index.html",
-    "precache-manifest.da4a14b02b325fb6c907b482faaca228.js": "/stocking/precache-manifest.da4a14b02b325fb6c907b482faaca228.js",
+    "precache-manifest.2411f37afdc2b36cbe97927d10da998d.js": "/stocking/precache-manifest.2411f37afdc2b36cbe97927d10da998d.js",
     "service-worker.js": "/stocking/service-worker.js",
-    "static/css/main.78509c19.chunk.css.map": "/stocking/static/css/main.78509c19.chunk.css.map",
+    "static/css/main.982110e3.chunk.css.map": "/stocking/static/css/main.982110e3.chunk.css.map",
     "static/js/2.a954b53f.chunk.js.LICENSE.txt": "/stocking/static/js/2.a954b53f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f910fbcf.js",
     "static/js/2.a954b53f.chunk.js",
-    "static/css/main.78509c19.chunk.css",
+    "static/css/main.982110e3.chunk.css",
     "static/js/main.d2164f55.chunk.js"
   ]
 }
