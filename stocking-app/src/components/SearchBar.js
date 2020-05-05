@@ -53,6 +53,7 @@ function SearchBar() {
       e.preventDefault();
       let symbol = document.getElementById('searchbar').value;
       handleSearch(symbol);
+      document.getElementById('searchbar').value = '';
     };
   };
 
