@@ -57,7 +57,7 @@ input:focus {
   background-color: #FFF8F8;
 }
 
-#stockInfoTop{
+#stockInfoTop {
   height: 100px;
   display: flex;
   flex-direction: column;
@@ -65,12 +65,30 @@ input:focus {
   margin-bottom: 20px;
 
   font-size: 36px;
+  font-weight: bold;
 }
 .green-stockInfoTop {
   color: #00C389;
 }
 .red-stockInfoTop {
   color: #FF4A4A;
+}
+
+.stockDatum {
+  display: flex;
+  flex-direction: row;
+  /* align-items: baseline; */
+  width: 200px;
+  font-size: 20px;
+}
+.datumLabel {
+  flex-grow: 1;
+  text-align: left;
+  font-weight: bold;
+}
+.datumValue {
+  flex-grow: 1;
+  text-align: right;
 }
 
 .watchlist {
@@ -87,7 +105,6 @@ input:focus {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-
 }
 
 .stockCard {

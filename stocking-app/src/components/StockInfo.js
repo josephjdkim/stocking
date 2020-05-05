@@ -3,6 +3,7 @@ import { StockDataContext } from '../contexts/StockDataContext'
 
 function StockInfo() {
   const {stockData} = useContext(StockDataContext);
+  const datumKeys = [['volume', 'Volume'], ['open', 'Open'], ['high', 'High'], ['open', 'Open']];
 
   useEffect(() => {
     console.log('useEffect from within StockInfo. Symbol from data:', stockData['symbol']);
@@ -32,17 +33,25 @@ function StockInfo() {
   return (
     <div id="stockInfo">
       <div id="stockInfoTop">
-        <h3 className="stockInfoTop-left">{stockData.name}</h3>
-        <h3 className="stockInfoTop-left">{stockData.symbol}</h3>
-        <h3 className="stockInfoTop-right">${stockData.close}</h3>
-        <h3 className="stockInfoTop-right">{stockData.change}%</h3>
+        <div className="stockInfoTop-left">{stockData.name}</div>
+        <div className="stockInfoTop-left">{stockData.symbol}</div>
+        <div className="stockInfoTop-right">${stockData.close}</div>
+        <div className="stockInfoTop-right">{stockData.change}%</div>
       </div>
-      <div id="stockInfoBottom">
-        <h3 className="stockInfoBottom-left">Volume: {stockData.volume}</h3>
-        <h3 className="stockInfoBottom-left">High: {stockData.high}</h3>
-        <h3 className="stockInfoBottom-left">Low: {stockData.low}</h3>
-        <h3 className="stockInfoBottom-left">Open: {stockData.open}</h3>
-      </div>
+      {datumKeys.map(pair => {
+        // console.log("INSIDE datumKeys.forEach:", pair[0]);
+        return (
+          <div className="stockDatum">
+            <p className="datumLabel">{pair[1]}:</p>
+            <p className="datumValue">{stockData[pair[0]]}</p>
+          </div>
+        )
+      })}
+
+        {/* <div className="stockDatum">Volume: {stockData.volume}</div>
+        <div className="stockDatum">High: {stockData.high}</div>
+        <div className="stockDatum">Low: {stockData.low}</div>
+        <div className="stockDatum">Open: {stockData.open}</div> */}
     </div>
   );
 }
