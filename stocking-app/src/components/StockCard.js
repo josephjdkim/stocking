@@ -12,6 +12,7 @@ function StockCard(props) {
     setStockData({
       name: props.stock.name,
       symbol: props.stock.symbol,
+      updated: props.stock.updated,
       open:  props.stock.open,
       high: props.stock.high,
       low:  props.stock.low,

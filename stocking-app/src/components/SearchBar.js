@@ -20,8 +20,10 @@ function SearchBar() {
       })
       .then((response) => { return response.json(); })
       .then((jsonResponse) => {
+        console.log(jsonResponse)
         let ts = jsonResponse["Time Series (Daily)"];
         let data = ts[Object.keys(ts)[0]];
+        let updated = jsonResponse["Meta Data"]["3. Last Refreshed"];
 
         let open = Number(Number(data['1. open']).toFixed(2)).toLocaleString();
         let close = Number(Number(data['4. close']).toFixed(2)).toLocaleString();
@@ -29,6 +31,7 @@ function SearchBar() {
         setStockData({
           name: companyName,
           symbol: symbol.toUpperCase(),
+          updated: updated,
           open:  open,
           high: Number(Number(data['2. high']).toFixed(2)).toLocaleString(),
           low:  Number(Number(data['3. low']).toFixed(2)).toLocaleString(),

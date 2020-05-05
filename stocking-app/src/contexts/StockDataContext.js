@@ -6,6 +6,7 @@ function StockDataContextProvider(props) {
   const [stockData, setStockData] = useState({
     name: 'Stocking',
     symbol: 'STOCKING',
+    updated: 0,
     open: 0,
     high: 0,
     low: 0,

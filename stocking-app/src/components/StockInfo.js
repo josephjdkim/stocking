@@ -3,7 +3,7 @@ import { StockDataContext } from '../contexts/StockDataContext'
 
 function StockInfo() {
   const {stockData} = useContext(StockDataContext);
-  const datumKeys = [['volume', 'Volume'], ['open', 'Open'], ['high', 'High'], ['open', 'Open']];
+  const datumKeys = [['volume', 'Volume'], ['open', 'Open'], ['high', 'High'], ['open', 'Open'], ['updated', 'Updated']];
 
   useEffect(() => {
     handleDefault();

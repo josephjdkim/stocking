@@ -16,6 +16,7 @@ function Watchlist() {
       setWatchlist([...watchlist, {
         name: stockData.name,
         symbol: stockData.symbol,
+        updated: stockData.updated,
         open: stockData.open,
         high: stockData.high,
         low: stockData.low,
