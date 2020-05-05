@@ -4,9 +4,9 @@ import { StockDataContext } from '../contexts/StockDataContext'
 function StockCard(props) {
   const { setStockData } = useContext(StockDataContext);
   const className = "stockCard " + props.theme + "-stockCard";
-  let displayName = props.stock.name;
+  // let displayName = props.stock.name;
 
-  if (displayName.length >= 20) { displayName = displayName.slice(0, 18) + '...'; }
+  // if (displayName.length >= 20) { displayName = displayName.slice(0, 18) + '...'; }
   
   function updateStockData() {
     setStockData({
@@ -24,7 +24,7 @@ function StockCard(props) {
 
   return (
     <div className={className} onClick={updateStockData}>
-      <p className="stockCard-name">{displayName}</p>
+      <p className="stockCard-name">{props.stock.name}</p>
       <h3 className="stockCard-symbol">{props.stock.symbol}</h3>
       <h3 className="stockCard-change">{props.stock.change}%</h3>
     </div>

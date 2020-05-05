@@ -166,10 +166,13 @@ input:focus {
 }
 
 .stockCard-name {
-  margin-top: 12px;
-  margin-left: 20px;
+  margin: 12px 20px 0;
   flex-basis: 100%;
   color: black;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .stockCard-symbol {
   text-align: left;
