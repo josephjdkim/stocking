@@ -9,7 +9,8 @@ function StockDataContextProvider(props) {
     high: 0,
     low: 0,
     close: 0,
-    volume: 0
+    volume: 0,
+    change: 0
   });
   return (
     <StockDataContext.Provider value={{stockData, setStockData}}>
