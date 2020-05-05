@@ -14,6 +14,7 @@ input:focus {
 
 .header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   margin: 40px 72px 40px;
@@ -22,7 +23,6 @@ input:focus {
 .hero {
   font-size: 60px;
   color: #FFCD06;
-  /* float: left; */
 }
 
 #search {
@@ -48,7 +48,7 @@ input:focus {
   clear: both;
   display: block;
   height: 200px;
-  padding: 60px 100px;
+  padding: 60px 112px;
 }
 .green-stockInfo {
   background-color: #F3FFFC;
