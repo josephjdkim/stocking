@@ -23,7 +23,8 @@ function Watchlist() {
         high: stockData['high'],
         low: stockData['low'],
         close: stockData['close'],
-        volume: stockData['volume']
+        volume: stockData['volume'],
+        change: stockData['change']
       }]);
     };
   };
