@@ -47,7 +47,6 @@ input:focus {
 #stockInfo {
   clear: both;
   display: block;
-  /* height: 200px; */
   padding: 40px 100px;
 }
 .green-stockInfo {
@@ -206,20 +205,26 @@ input:focus {
   }
   /* phone portrait */
   @media screen and (max-width:600px) {
+    .header {
+      margin: 40px 32px 36px;
+    }
+
     .hero {
       margin-bottom: 12px;
       font-size: 44px;
     }
     #stockInfo {
-      padding: 40px 40px;
+      padding: 40px 32px;
     }
     #stockInfoTop {
-      font-size: 32px;
+      font-size: 28px;
       font-weight: 900;
+      height: 70px;
+
     }
 
     .watchlist {
-      padding: 40px 40px;
+      padding: 40px 32px;
     }
     .watchlist .prompt {
       font-size: 24px;
