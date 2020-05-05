@@ -11,10 +11,11 @@ function Watchlist() {
     checkNewStock();
     console.log('watchlist from within Watchlist', watchlist)
   }, [stockData]);
-
+  
   function checkNewStock() {
     console.log('WITHIN checkNewStock()')
-
+    
+    
     const isDuplicate = watchlist.find(s => (s.symbol === stockData.symbol))
     if ((!isDuplicate && !(stockData['symbol'] === 'STOCKING'))) {
       setWatchlist([...watchlist, {
@@ -28,14 +29,19 @@ function Watchlist() {
       }]);
     };
   };
+  
+  function setStockTheme(s) {
+    return (s.change >= 0) ? 'green' : 'red';
+  }
 
   return (
     <div className="watchlist">
       <h2 className="prompt">Recently Searched Stocks:</h2>
       <div className="stocks">
         {watchlist.map(stock => {
+          let theme = setStockTheme(stock);
           return(
-            <StockCard stock={stock} />
+            <StockCard stock={stock} theme={theme}/>
             )
           })}
       </div>

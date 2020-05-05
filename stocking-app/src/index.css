@@ -90,7 +90,15 @@ input:focus {
   border-style: solid;
   border-radius: 22px;
   border-width: 2px;
+  box-shadow: 0px 4px 6px grey;
+}
+
+.green-stockCard {
   border-color: #00C389;
   color: #00C389;
-  box-shadow: 0px 4px 6px grey;
+}
+
+.red-stockCard {
+  border-color: #FF4A4A;
+  color: #FF4A4A;
 }
