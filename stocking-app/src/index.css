@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
 * {
   margin: 0;
@@ -65,7 +65,7 @@ input:focus {
   height: 112px;
   
   font-size: 40px;
-  font-weight: 900;
+  font-weight: bold;
 }
 .green-stockInfoTop {
   color: #00C389;
