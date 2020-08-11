@@ -13,7 +13,7 @@ function Watchlist() {
   function checkNewStock() {
     const isDuplicate = watchlist.find(s => (s.symbol === stockData.symbol))
     if ((!isDuplicate && !(stockData.symbol === 'STOCKING'))) {
-      setWatchlist([...watchlist, {
+      setWatchlist([{
         name: stockData.name,
         symbol: stockData.symbol,
         updated: stockData.updated,
@@ -23,7 +23,7 @@ function Watchlist() {
         close: stockData.close,
         volume: stockData.volume,
         change: stockData.change
-      }]);
+      }, ...watchlist]);
     };
   };
   
