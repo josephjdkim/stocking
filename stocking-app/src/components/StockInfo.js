@@ -34,7 +34,7 @@ function StockInfo() {
       <div id="stockInfoTop">
         <div id="stockInfoName" className="stockInfoTop-left">{stockData.name}</div>
         <div className="stockInfoTop-left">{stockData.symbol}</div>
-        <div className="stockInfoTop-right">${stockData.close}</div>
+        <div className="stockInfoTop-right">${stockData.close.toLocaleString()}</div>
         <div className="stockInfoTop-right">{stockData.change}%</div>
       </div>
       <div id="stockDataBank">
@@ -44,8 +44,8 @@ function StockInfo() {
             <p className="datumLabel">{pair[1]}:</p>
             <p className="datumValue">{
               (['Open', 'High', 'Low'].includes(pair[1])
-                ? '$'+stockData[pair[0]].toString()
-                : stockData[pair[0]])
+                ? '$'+stockData[pair[0]].toLocaleString()
+                : stockData[pair[0]].toLocaleString())
             }</p>
           </div>
         )
