@@ -30,20 +30,24 @@ function SearchBar() {
         let data = ts[Object.keys(ts)[0]];
         let updated = jsonResponse["Meta Data"]["3. Last Refreshed"];
 
-        let open = Number(Number(data['1. open']).toFixed(2)).toLocaleString();
-        let close = Number(Number(data['4. close']).toFixed(2)).toLocaleString();
+        let open = Number(Number(data['1. open']).toFixed(2));
+        let close = Number(Number(data['4. close']).toFixed(2));
+        let high = Number(Number(data['2. high']).toFixed(2));
+        let low = Number(Number(data['3. low']).toFixed(2));
+        let volume = Number(data['5. volume']);
 
         setStockData({
           name: companyName,
           symbol: symbol.toUpperCase(),
           updated: updated,
           open:  open,
-          high: Number(Number(data['2. high']).toFixed(2)).toLocaleString(),
-          low:  Number(Number(data['3. low']).toFixed(2)).toLocaleString(),
+          high: high,
+          low:  low,
           close: close,
-          change: Number(Number((((close - open) / open) * 100)).toFixed(2)).toLocaleString(),
-          volume: data['5. volume'].toLocaleString()
+          change: Number(Number(((Number(close) - Number(open)) / Number(open)) * 100).toFixed(2)),
+          volume: volume
         });
+        // console.log(Number(open.replace(',','')))
       })
       .catch(err => {
         console.log('Encountered an error:', err)
